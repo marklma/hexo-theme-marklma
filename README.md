@@ -2,7 +2,7 @@
 
 基于[Hexo]主题[chenall V2.2](https://github.com/chenall/hexo-theme-chenall)修改而成,未在主要功能上做相关改动,仅仅增加一些小内容以及美化主题.
 
-- 独特的用户配置文件(自动加载`$SOURCE\_$THEME.yml`[默认就是**source\\_marklma.yml**]作为主题的配置文件,这样可以避免升级主题或其它原因导致的配置文件丢失).
+- 用户配置文件也采用chenall的方案(自动加载`$SOURCE\_$THEME.yml`[默认就是**source\\_marklma.yml**]作为主题的配置文件,这样可以避免升级主题或其它原因导致的配置文件丢失).
 
 ### **具体效果:** [demo] 或我的搏客 [marklma.ga] gitcafe.com/marklma里面有这两个站点的完整源码
 
@@ -46,7 +46,7 @@ loaded_modules:
 - fontawesome
 - prettify
 - fancybox
-\#- mathjax
+#- mathjax
 
 # 注: 模块是由css或js文件来实现的,部份需要附加js代码的模块在_modules目录下.
 # 如: prettify 如果加载了prettify则会同时加载_modules\_modules.ejs
@@ -104,7 +104,7 @@ modules:
 comments:
     provider: duoshuo
     show_count: true
-    short_name: hexochenall
+    short_name: MarkLMa
 
 ## 站点分析统计代码功能组件
 # 加载在站点的footer位置
@@ -118,10 +118,10 @@ analytics:
   51la:
   # cnzz 免费统计
   cnzz:
-    siteid: 5774006  #站点ID,在获取统计代码的页面的地址栏上可以看到siteid=xxxx或从代码中提取(一般是一串数字)
+    siteid:   #站点ID,在获取统计代码的页面的地址栏上可以看到siteid=xxxx或从代码中提取(一般是一串数字)
     show: #显示样式  留空: 图片形式1; 1: 图片形式2; 2: 图片形式1; 其它值: 文字形式
   baidu: # 百度统计对应站点的hash信息，在百度统计中获取的代码中的32个字符串信息 %3F 后面的32个十六进制字符串。类似下面的
-    siteid: 1442f50724afc42380b51f097c43082c
+    siteid: 
 
 # 站点顶部菜单,支持子菜单
 menu:
@@ -129,8 +129,9 @@ menu:
   About: about/
   Archives: archives/
   其它链接:
-    chenall: //chenall.net
-    gihtub: https://github.com/chenall/hexo-theme-chenall
+    marklma: //marklma.ga
+    sourse: https://github.com/marklma/hexo-theme-marklma
+    weibo: http://www.weibo.com/marklma
 
 # ajax_widgets是否使用jquery.load动态加载widget的内容,
 # 注: 部份小工具,像标签,分类,最近文章等,这些工具的内容在所有页面都是一样的,这时它就支持动态加载
@@ -144,17 +145,18 @@ widgets:
   header: #顶部
   footer: #底部
   sidebar: #侧边栏
-    - search
+    - swiftype
+    #- search
     - category
     - recent_posts
     - tagcloud
     - latest_update_posts
-    - random_posts
+    #- random_posts
     - sina_weiboshow
     - recent_comments
   before_content: # 文章内容前
   after_content:  # 文章内容后
-    - wumiiRelatedItems
+    #- wumiiRelatedItems
     - post_footer_info
     - ujian
 
@@ -179,57 +181,17 @@ CDN_URL: http://your.cdn.url
 Beian:
 
 ## 使用反色的导航条(值为true时导航条的背景色是黑色)
-bs_nav_inverse: false
+bs_nav_inverse: true
 
-twitter_id: chenall
+twitter_id: marklma
 facebook_id:
 linkedin_id:
-github_id: chenall/almrun
+github_id: marklma
 
 rss: atom.xml
 
 ```
 
-### 其它语言支持
-
-  本主题只设置了简体中文语言文件,要使用其它语言,可以自己翻译下.以下是简体中文的语言文件例子:
-
-```yaml
-categories: 分类
-search: 搜索
-tags: 标签
-tagcloud: 标签云
-tweets: 推文
-prev: 上一页
-next: 下一页
-comment: 留言
-archive_a: 归档
-archive_b: 归档：%s
-page: 第 %d 页
-
-post:
-  updated: 最近更新
-  Tagged: 标签
-  Posted on: 发表于
-  Posted in: 归类
-  read more: 阅读全文
-
-menu:
-  Home: 主页
-  About: 关于
-  Archives: 归档
-  GuestBook: 留言板
-
-widgets:
-  category: 分类
-  recent_posts: 最近文章
-  latest_update_posts: 最近更新
-  recent_comments: 最近评论
-  sina_weiboshow: 新浪微搏秀
-  google_sidebar: 赞助商
-  tags: 标签
-  tagcloud: 标签云
-```
 [Hexo]: http://hexo.io/
-[demo]: http://hexo.chenall.net
+[demo]: http://marklma.ga
 [chenall.net]: http://chenall.net
