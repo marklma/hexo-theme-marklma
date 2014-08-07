@@ -47,6 +47,7 @@ loaded_modules:
 - prettify
 - fancybox
 #- mathjax
+- totop
 
 # 注: 模块是由css或js文件来实现的,部份需要附加js代码的模块在_modules目录下.
 # 如: prettify 如果加载了prettify则会同时加载_modules\_modules.ejs
