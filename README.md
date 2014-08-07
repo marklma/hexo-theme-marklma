@@ -1,4 +1,4 @@
-# chenall V2.2
+# marklma
 
 基于[Hexo]主题[chenall V2.2](https://github.com/chenall/hexo-theme-chenall)修改而成,未在主要功能上做相关改动,仅仅增加一些小内容以及美化主题.
 
