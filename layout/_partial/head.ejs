@@ -41,9 +41,14 @@ title.push(UserConfig.title);
 <!--[if gt IE 8]><style>.testIE.IE9{display:inline;}</style><![endif]-->
 
 <%if(config.author_url){%><link rel="author" href="<%-config.author_url%>" /><%}%>
-<link href="<%- config.root %>favicon.ico" type="image/x-icon" rel=icon>
-<link href="<%- config.root %>favicon.ico" type="image/x-icon" rel="shortcut icon">
-<link href="<%- config.root %>favicon.png" rel="apple-touch-icon">
+<% if (UserConfig.favicon){ %>
+<link rel="icon" href="<%- config.root %><%- UserConfig.favicon %>" type="image/x-icon">
+<link rel="shortcut icon" href="<%- config.root %><%- UserConfig.favicon %>" type="image/x-icon">
+<% } %>
+<% if (UserConfig.apple_icon){ %>
+<link rel="apple-touch-icon" href="<%- config.root %><%- UserConfig.apple_icon %>">
+<link rel="apple-touch-icon-precomposed" href="<%- config.root %><%- UserConfig.apple_icon %>">
+<% } %>
 <link rel="alternate" href="<% if (UserConfig.rss){ %><%- RealPath(UserConfig.rss) %><% } else if (config.feed.path){ %><%- RealPath(config.feed.path) %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= UserConfig.title %> Feed" type="application/atom+xml">
 <%var modules_css = [];UserConfig.loaded_modules.forEach(function(mod){var module = UserConfig.modules[mod];if (module && module.css) modules_css.push(module.css);})%>
 <%- css(modules_css) %>
