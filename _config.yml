@@ -111,12 +111,15 @@ widgets:
     - category
     - recent_posts
     - tagcloud
+    #- tags
     - latest_update_posts
     #- random_posts
     - sina_weiboshow
     - recent_comments
+    - visitmap
   before_content: # 文章内容前
   after_content:  # 文章内容后
+    - totop
     #- wumiiRelatedItems
     - post_footer_info
     - ujian
@@ -136,7 +139,7 @@ tag_minium: 3
 GTM_ID:
 
 ## 在文章中使用'[CDN_URL]:'字符串自动替换为下面的地址,主要是为了方便使用.
-CDN_URL: http://your.cdn.url
+CDN_URL: //your.cdn.url
 
 ## ICP备案编号
 Beian:
@@ -145,8 +148,8 @@ Beian:
 bs_nav_inverse: true
 
 twitter_id: marklma
-facebook_id:
-linkedin_id:
+facebook_id: marklma
+linkedin_id: marklma
 github_id: marklma
 
 rss: atom.xml
