@@ -1,5 +1,5 @@
-<div class="panel-footer">
-  <div id="site-info">
+<div class="footer-info" class="inner">
+  <div id="outer">
     <span class='author'>
   <% if (config.author){ %>
   &copy; <%= UserConfig.SiteDate %> <%= config.author %>
@@ -17,4 +17,3 @@
   </div>
   <div id="copyright">Blog powered by <a href='http://hexo.io/' <%if (hexo.env.version){%> title="本站由hexo V<%- hexo.env.version%> 生成"<%}%>><strong>hexo</strong></a> Theme <strong><a href='https://github.com/marklma/hexo-theme-marklma'>marklma</a></strong><span class="pull-right"> 更新时间: <em><%-time(page.updated,'YYYY-MM-DD HH:mm:ss')%></em></span></div>
 </div>
-<div class="clearfix"></div>
