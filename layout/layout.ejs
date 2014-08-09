@@ -44,10 +44,10 @@ if (page.widgets && page.widgets.theme == false)
        <div class="clearfix"></div>
      </div><!-- row END -->
   </div>
-  <footer id="footer">
-  <div class="container">
+  <footer id="footer" class="container">
+  <div class="panel panel-info">
   <%- UserConfig.load_widgets('footer',page) -%>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/footer') %>
   </div>
   </footer>
   <%- partial('_partial/after_footer') %>
