@@ -8,7 +8,9 @@ loaded_modules:
 - fontawesome
 - prettify
 - fancybox
+- swiftype
 #- mathjax
+- totop
 
 # 注: 模块是由css或js文件来实现的,部份需要附加js代码的模块在_modules目录下.
 # 如: prettify 如果加载了prettify则会同时加载_modules\_modules.ejs
@@ -21,41 +23,45 @@ modules:
   # proxy 指定respond的proxy地址
   # 注: bootstrap的css文件和这个proxy需要在同一个域上
   respond: ## A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).
-    js: http://cdn.staticfile.org/respond.js/1.4.2/respond.min.js
-    proxy: http://cdn.staticfile.org/respond.js/1.4.2/respond-proxy.html
+    js: //cdn.staticfile.org/respond.js/1.4.2/respond.min.js
+    proxy: //cdn.staticfile.org/respond.js/1.4.2/respond-proxy.html
   jquery:
-    js: http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js
+    js: //cdn.bootcss.com/jquery/1.10.2/jquery.min.js
   bootstrap: #强大的CSS框架，由Twitter的开发工程师推出
-    css: http://cdn.staticfile.org/twitter-bootstrap/3.1.0/css/bootstrap.min.css
-    js: http://cdn.staticfile.org/twitter-bootstrap/3.1.0/js/bootstrap.min.js
+    css: //cdn.staticfile.org/twitter-bootstrap/3.1.0/css/bootstrap.min.css
+    js: //cdn.staticfile.org/twitter-bootstrap/3.1.0/js/bootstrap.min.js
   prettify: # Google Code Prettify 代码的高亮显示
-    css: http://cdn.bootcss.com/prettify/r298/prettify.min.css
-    js: http://cdn.bootcss.com/prettify/r298/prettify.min.js
+    css: //cdn.bootcss.com/prettify/r298/prettify.min.css
+    js: //cdn.bootcss.com/prettify/r298/prettify.min.js
   highlightjs: # highlight.js 代码高亮显示插件
-    css: http://cdn.bootcss.com/highlight.js/7.4/styles/github.min.css
-    js:  http://cdn.bootcss.com/highlight.js/7.4/highlight.min.js
+    css: //cdn.bootcss.com/highlight.js/7.4/styles/github.min.css
+    js:  //cdn.bootcss.com/highlight.js/7.4/highlight.min.js
   fancybox: # 一款基于jQuery开发的类Lightbox插件
-    css: http://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
-    js:  http://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+    css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+    js:  //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
   imagesloaded: #监测图片是否加载完毕的JavaScript库
     #js: js/jquery.imagesloaded.min.js
-     js: http://cdn.bootcss.com/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js
+     js: //cdn.bootcss.com/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js
   Gallery:
-    css: http://cdn.bootcss.com/blueimp-gallery/2.11.2/css/blueimp-gallery.min.css
-    js: http://cdn.bootcss.com/blueimp-gallery/2.11.2/js/jquery.blueimp-gallery.min.js
+    css: //cdn.bootcss.com/blueimp-gallery/2.11.2/css/blueimp-gallery.min.css
+    js: //cdn.bootcss.com/blueimp-gallery/2.11.2/js/jquery.blueimp-gallery.min.js
   fontawesome:
-    css: http://cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
+    css: //cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css
   # MathJax is an open source JavaScript display engine for mathematics that works in all browsers.
   mathjax: # 生成数学公式插件
     css:
-    js: http://cdn.bootcss.com/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    #js: http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    js: //cdn.bootcss.com/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    #js: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  # totop is a stroll up plungin
+  totop:  # totip 是添加返回顶部功能
+    js: /js/totop.js
   uyan: #有言评论系统
     uid: 1880458
   ujian: #友荐：为网站添加'猜你喜欢'功能
     uid: 1880458
   swiftype: #Swiftype配置，详情访问https://swiftype.com
-    key: #对应的Engine Key 在https://swiftype.com/home可以看到。
+  #key对应的Engine Key 在https://swiftype.com/home可以看到。
+    key: 
 
 ##评论功能设置,目前支持disqus和duoshuo/uyan,需要在上面的modules中进行要应的设置
 # show_count 是否显示文章的评论数量
@@ -72,8 +78,8 @@ comments:
 # 加载在站点的footer位置
 analytics:
   # provider 要加载的统计代码类型,可同时加载多少,使用","分隔. 如下就加载了51la和google的统计代码
-  # provider: 51la,google 
-  provider: 51la,google,cnzz,baidu
+  # provider: 51la,google,cnzz,baidu 
+  provider: cnzz,baidu
   # google-analytics UA
   google:
   # 我要啦」免费统计 ID
@@ -91,9 +97,10 @@ menu:
   About: about/
   Archives: archives/
   其它链接:
-    chenall: //marklma.ga
-    gihtub: https://github.com/marklma/hexo-theme-marklma
-
+    marklma: //marklma.ga
+    sourse: https://gitcafe.com/marklma
+    weibo: http://www.weibo.com/marklma
+	
 # ajax_widgets是否使用jquery.load动态加载widget的内容,
 # 注: 部份小工具,像标签,分类,最近文章等,这些工具的内容在所有页面都是一样的,这时它就支持动态加载
 # 所谓的动态加载,就是把这些内容从文章中分离出来独立存在,并采用ajax技术动态加载到指定位置.
@@ -111,12 +118,15 @@ widgets:
     - category
     - recent_posts
     - tagcloud
+    #- tags
     - latest_update_posts
     #- random_posts
     - sina_weiboshow
     - recent_comments
+    - visitmap
   before_content: # 文章内容前
   after_content:  # 文章内容后
+    - totop
     #- wumiiRelatedItems
     - post_footer_info
     - ujian
@@ -136,21 +146,21 @@ tag_minium: 3
 GTM_ID:
 
 ## 在文章中使用'[CDN_URL]:'字符串自动替换为下面的地址,主要是为了方便使用.
-CDN_URL: http://your.cdn.url
+CDN_URL: //your.cdn.url
 
 ## ICP备案编号
 Beian:
 
-## 使用反色的导航条(值为true时导航条的背景色是黑色)
+## 使用反色的导航条，请根据banner图片修改
 bs_nav_inverse: true
 
 twitter_id: marklma
-facebook_id:
-linkedin_id:
+facebook_id: marklma
+linkedin_id: MarkLMa
 github_id: marklma
 
 rss: atom.xml
 
-## favicon
-favicon: favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/source`.     
+## favicon 
+favicon: favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/source
 apple_icon: favicon.png  ## size:114px*114px,please put image into the theme folder `/source`.
