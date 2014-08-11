@@ -129,6 +129,7 @@ widgets:
     - totop
     #- wumiiRelatedItems
     - post_footer_info
+    - baidushare
     - ujian
 
   after_post:     # 文章框架之后
